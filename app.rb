@@ -6,8 +6,6 @@ also_reload('lib/**/*.rb')
 
 get ('/') do
   @riddle1 = Riddles.new("The more you take, the more you leave behind. What am I?", "footsteps")
-  @riddle2 = Riddles.new("What has a head, a tail, is brown, and has no legs?", "a penny")
-  @riddle3 = Riddles.new("David's father has three sons : Snap, Crackle and _____ ?", "david")
   erb(:sphinx)
 end
 
@@ -22,12 +20,6 @@ post ('/riddles') do
   else
     erb(:riddles_wrong)
   end
-end
-
-get ('/riddles2') do
-
-  @riddle3 = Riddles.new("David's father has three sons : Snap, Crackle and _____ ?", "david")
-  erb(:riddles2)
 end
 
 post ('/riddles2') do

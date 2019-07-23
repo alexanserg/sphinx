@@ -7,7 +7,7 @@ class Riddles
     @answer = answer
   end
   def ask(user_answer)
-    if user_answer == @answer
+    if user_answer == self.answer
       true
     else
       false

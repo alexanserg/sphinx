@@ -1,0 +1,16 @@
+<h1>Trial</h1>
+
+<h3>Answer these riddles</h3>
+
+  <ul>
+    <form action="/riddles">
+      <div class="form-group">
+    <% @riddle_array.each do |riddle| %>
+      <li><%= riddle.question %></li>
+        <label for="search">Enter answer</label>
+        <input id="search" name= "<%= riddle.answer %>" class="form-control" type="text">
+      <% end %>
+    </div>
+    </ul>
+      <button type="submit" class="btn">Go!</button>
+    </form>
